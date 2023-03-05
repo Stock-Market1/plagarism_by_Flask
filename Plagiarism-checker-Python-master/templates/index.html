@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plagiarism Checker</title>
+</head>
+<body>
+    <h1>Plagiarism Checker</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Student 1</th>
+                <th>Student 2</th>
+                <th>Plagiarism Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student1, student2, similarity_score in results %}
+            <tr>
+                <td>{{ student1 }}</td>
+                <td>{{ student2 }}</td>
+                <td>{{ similarity_score|round(2) }}%</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
